@@ -22,6 +22,10 @@ import Dashboard from './src/screens/Dashboard';
 import Register from './src/screens/Register';
 import Registerv2 from './src/screens/Registerv2';
 import Grid from './src/screens/Grid';
+import Home from './src/screens/Home';
+import Onboarding from './src/screens/Onboarding';
+import Settings from './src/screens/Settings';
+import Profile from './src/screens/Profile';
 
 import theme from './src/theme';
 import { Block, Icon, Text } from 'galio-framework';
@@ -85,11 +89,39 @@ MenuIcon.propTypes = {
 };
 
 const screens = createDrawerNavigator({
-  Home: {
+  Components: {
     screen: Components,
     navigationOptions: {
       drawerLabel: 'Components',
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+    },
+  },
+  Home: {
+    screen: Home,
+    navigationOptions: {
+      drawerLabel: 'Home',
+      drawerIcon: props => <MenuIcon name="home" family="FontAwesome" focused={props.focused} />,
+    },
+  },
+  Onboarding: {
+    screen: Onboarding,
+    navigationOptions: {
+      drawerLabel: 'Onboarding',
+      drawerIcon: props => <MenuIcon name="aircraft-take-off" family="Entypo" focused={props.focused} />,
+    },
+  },
+  Settings: {
+    screen: Settings,
+    navigationOptions: {
+      drawerLabel: 'Settings',
+      drawerIcon: props => <MenuIcon name="settings" family="Ionicons" focused={props.focused} />,
+    },
+  },
+  Profile: {
+    screen: Profile,
+    navigationOptions: {
+      drawerLabel: 'Profile',
+      drawerIcon: props => <MenuIcon name="user" family="Entypo" focused={props.focused} />,
     },
   },
   Cards: {

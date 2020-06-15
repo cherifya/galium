@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Dimensions, StyleSheet, StatusBar, Image,
 } from 'react-native';
-import { LinearGradient } from 'expo';
+import { LinearGradient } from 'expo-linear-gradient';
 import Constants from 'expo-constants';
 // galio components
 import {

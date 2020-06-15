@@ -8,6 +8,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-navigation/compat": "^5.1.26",
     "expo": "~37.0.3",
     "expo-linear-gradient": "~7.0.0",
     "expo-splash-screen": "^0.2.3",
