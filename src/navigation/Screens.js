@@ -12,7 +12,8 @@ import Home from "../screens/Home";
 import Onboarding from "../screens/Onboarding";
 import Pro from "../screens/Pro";
 import Profile from "../screens/Profilev2";
-import Register from "../screens/Registerv3";
+import Register from "../screens/Register";
+import Login from "../screens/Login";
 import Elements from "../screens/Elements";
 import Components from "../screens/Components";
 import Article from "../screens/Article";
@@ -241,6 +242,47 @@ function ProfileStack(props) {
   );
 }
 
+function LoginStack(props) {
+  return (
+    <Stack.Navigator initialRouteName="Profile" mode="card" headerMode="screen">
+      <Stack.Screen
+        name="Login"
+        component={Login}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header
+              transparent
+              black
+              title=""
+              navigation={navigation}
+              scene={scene}
+            />
+          ),
+          cardStyle: { backgroundColor: "#FFFFFF" },
+          headerTransparent: true
+        }}
+      />
+            <Stack.Screen
+        name="Register"
+        component={Register}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header
+              title=""
+              back
+              black
+              transparent
+              navigation={navigation}
+              scene={scene}
+            />
+          ),
+          headerTransparent: true
+        }}
+      />
+    </Stack.Navigator>
+  );
+}
+
 function HomeStack(props) {
   return (
     <Stack.Navigator mode="card" headerMode="screen">
@@ -330,7 +372,7 @@ function AppStack(props) {
       <Drawer.Screen name="Home" component={HomeStack} />
       <Drawer.Screen name="Dashboard" component={DashboardStack} />
       <Drawer.Screen name="Profile" component={ProfileStack} />
-      <Drawer.Screen name="Account" component={Register} />
+      <Drawer.Screen name="Account" component={LoginStack} />
       <Drawer.Screen name="Elements" component={ElementsStack} />
       <Drawer.Screen name="Articles" component={ArticlesStack} />
       <Drawer.Screen name="Presentation" component={PresentationStack} />

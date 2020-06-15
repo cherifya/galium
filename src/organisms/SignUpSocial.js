@@ -13,10 +13,10 @@ import theme from '../theme';
 
 const { height } = Dimensions.get('window');
 
-const SignUpSocial = () => {
+const SignUpSocial = ({title="Sign Up"}) => {
   return (
     <Block flex center style={{ marginTop: theme.SIZES.BASE * 1.875, marginBottom: height * 0.1 }}>
-      <Text h2 color="black" style={{ marginBottom: theme.SIZES.BASE}}>Sign Up</Text>
+      <Text h2 color="black" style={{ marginBottom: theme.SIZES.BASE}}>{title}</Text>
       <Text muted center size={theme.SIZES.SMALL} style={{ paddingHorizontal: theme.SIZES.BASE * 2.3 }}>
           via
       </Text>

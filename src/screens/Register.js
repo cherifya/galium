@@ -32,7 +32,7 @@ class Login extends React.Component {
         <KeyboardAvoidingView style={styles.container} behavior="height" enabled>
           <SignUpSocial />
           <SignUpInputs />
-          <SignUpButtons />
+          <SignUpButtons navigation={navigation} />
         </KeyboardAvoidingView>
       </Block>
     );

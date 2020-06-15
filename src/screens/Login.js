@@ -7,6 +7,9 @@ import {
 import {
   Block, Button, Input, NavBar, Text,
 } from 'galio-framework';
+
+import SignUpSocial from '../organisms/SignUpSocial.js';
+
 import theme from '../theme';
 
 const { height, width } = Dimensions.get('window');
@@ -39,48 +42,7 @@ class Login extends React.Component {
               of this step and even the next steps ahead
             </Text>
             <Block row center space="between" style={{ marginVertical: theme.SIZES.BASE * 1.875 }}>
-              <Block flex middle right>
-                <Button
-                  round
-                  onlyIcon
-                  iconSize={theme.SIZES.BASE * 1.625}
-                  icon="facebook"
-                  iconFamily="FontAwesome"
-                  color={theme.COLORS.FACEBOOK}
-                  shadowColor={theme.COLORS.FACEBOOK}
-                  iconColor={theme.COLORS.WHITE}
-                  style={styles.social}
-                  onPress={() => Alert.alert('Not implemented')}
-                />
-              </Block>
-              <Block flex middle center>
-                <Button
-                  round
-                  onlyIcon
-                  iconSize={theme.SIZES.BASE * 1.625}
-                  icon="twitter"
-                  iconFamily="FontAwesome"
-                  color={theme.COLORS.TWITTER}
-                  shadowColor={theme.COLORS.TWITTER}
-                  iconColor={theme.COLORS.WHITE}
-                  style={styles.social}
-                  onPress={() => Alert.alert('Not implemented')}
-                />
-              </Block>
-              <Block flex middle left>
-                <Button
-                  round
-                  onlyIcon
-                  iconSize={theme.SIZES.BASE * 1.625}
-                  icon="dribbble"
-                  iconFamily="FontAwesome"
-                  color={theme.COLORS.DRIBBBLE}
-                  shadowColor={theme.COLORS.DRIBBBLE}
-                  iconColor={theme.COLORS.WHITE}
-                  style={styles.social}
-                  onPress={() => Alert.alert('Not implemented')}
-                />
-              </Block>
+              <SignUpSocial title="Sign In" />
             </Block>
             <Text muted center size={theme.SIZES.FONT * 0.875}>
               or be classical

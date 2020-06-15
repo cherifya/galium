@@ -5,10 +5,10 @@ import {
 } from 'react-native';
 
 // galio component
-import { Block, Button, Link} from 'galio-framework';
+import { Block, Button, Text} from 'galio-framework';
 import theme from '../theme';
 
-const SignUpButtons = () => {
+const SignUpButtons = ({navigation}) => {
   return (
     <Block flex center>
       <Block flex middle>
@@ -28,14 +28,14 @@ const SignUpButtons = () => {
         >
           Sign up
         </Button>
-        <Link 
+        <Text 
           center
           size={theme.SIZES.FONT * 0.75}
           style={{ paddingTop: 8 }}
           onPress={() => navigation.navigate('Login')}
           >
           Already have an account? Sign In
-        </Link>
+        </Text>
       </Block>
     </Block>
 

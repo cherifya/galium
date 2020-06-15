@@ -6,84 +6,16 @@ import theme from '../theme';
 
 class DrawerItem extends React.Component {
   renderIcon = () => {
-    const { title, focused } = this.props;
+    const { title, icon, iconFamily, iconColor, focused } = this.props;
 
-    switch (title) {
-      case "Home":
-        return (
-          <Icon
-            name="shop"
-            family="ArgonExtra"
-            size={14}
-            color={focused ? "white" : theme.COLORS.PRIMARY}
-          />
-        );
-      case "Elements":
-        return (
-          <Icon
-            name="map"
-            family="font-awesome"
-            size={14}
-            color={focused ? "white" : theme.COLORS.ERROR}
-          />
-        );
-      case "Articles":
-        return (
-          <Icon
-            name="rocket"
-            family="font-awesome"
-            size={14}
-            color={focused ? "white" : theme.COLORS.PRIMARY}
-          />
-        );
-      case "Profile":
-        return (
-          <Icon
-            name="chart-pie"
-            family="font-awesome-5"
-            size={14}
-            color={focused ? "white" : theme.COLORS.WARNING}
-          />
-        );
-      case "Account":
-        return (
-          <Icon
-            name="calendar-alt"
-            family="font-awesome-5"
-            size={14}
-            color={focused ? "white" : theme.COLORS.INFO}
-          />
-        );
-      case "Dashboard":
-        return (
-          <Icon
-            name="dashboard"
-            family="font-awesome"
-            size={14}
-            color={focused ? "white" : theme.COLORS.INFO}
-          />
-        );
-      case "Settings":
-        return (
-          <Icon
-            name="settings"
-            family="feather"
-            size={14}
-            color={focused ? "white" : theme.COLORS.INFO}
-          />
-        );
-      case "Getting Started":
-        return (<Icon
-          name="hands-helping"
-          family="font-awesome-5"
-          size={14}
-          color={focused ? "white" : "rgba(0,0,0,0.5)"}
-        />);
-      case "Log out":
-        return <Icon />;
-      default:
-        return null;
-    }
+    return (
+      <Icon
+        name={icon}
+        family={iconFamily}
+        size={14}
+        color={focused ? "white" : iconColor}
+      />
+    );
   };
 
   render() {
@@ -100,7 +32,7 @@ class DrawerItem extends React.Component {
         onPress={() =>
           title == "Getting Started"
             ? Linking.openURL(
-                "https://demos.creative-tim.com/argon-pro-react-native/docs/"
+                "https://github.com/cherifya"
               ).catch(err => console.error("An error occurred", err))
             : navigation.navigate(title)
         }
