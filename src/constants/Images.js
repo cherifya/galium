@@ -1,8 +1,19 @@
 const Onboarding = 'https://images.unsplash.com/photo-1505995433366-e12047f3f144?fit=crop&w=840&q=80';
-const Pro = 'https://images.unsplash.com/photo-1485796826113-174aa68fd81b?fit=crop&w=840&q=80';
+//const Pro = 'https://images.unsplash.com/photo-1485796826113-174aa68fd81b?fit=crop&w=840&q=80';
 const Products = {
   'Accessories': 'https://source.unsplash.com//l1MCA0VyNrk/840x840',
 };
+
+// local imgs
+//const Onboarding = require("../../assets/imgs/bg.png");
+const Logo = require("../../assets/imgs/argon-logo.png");
+const LogoOnboarding = require("../../assets/imgs/argon-logo-onboarding.png");
+const ProfileBackground = require("../../assets/imgs/profile-screen-bg.png");
+const RegisterBackground = require("../../assets/imgs/register-bg.png");
+const Pro = require("../../assets/imgs/getPro-bg.png");
+const ArgonLogo = require("../../assets/imgs/argonlogo.png");
+const iOSLogo = require("../../assets/imgs/ios.png");
+const androidLogo = require("../../assets/imgs/android.png");
 
 const Profile = 'https://images.unsplash.com/photo-1512529920731-e8abaea917a5?fit=crop&w=840&q=80';
 const Avatar = 'https://images.unsplash.com/photo-1518725522904-4b3939358342?fit=crop&w=210&q=80';
@@ -18,7 +29,12 @@ const Viewed = [
 
 export default {
   Onboarding,
+  Logo,
+  LogoOnboarding,
   Pro,
+  ArgonLogo,
+  ProfileBackground,
+  RegisterBackground,
   Products,
   Profile,
   Viewed,

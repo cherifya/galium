@@ -62,19 +62,6 @@ export default class Settings extends React.Component {
       <View
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.settings}>
-        <StatusBar barStyle="light-content" />
-        <Block style={styles.navbar}>
-          <NavBar transparent left={(
-                <TouchableOpacity onPress={() => props.navigation.openDrawer()}>
-                  <Icon 
-                    name="menu"
-                    family="feather"
-                    size={theme.SIZES.BASE}
-                    color={theme.COLORS.WHITE}
-                  />
-                </TouchableOpacity>
-              )} />
-        </Block>
         <FlatList
           data={recommended}
           keyExtractor={(item, index) => item.id}

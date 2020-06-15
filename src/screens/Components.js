@@ -17,32 +17,6 @@ export default class Components extends React.Component {
     const { navigation } = this.props;
     return (
       <Block safe flex>
-        <NavBar
-          title="Galio Components"
-          right={(
-            <Button
-              onlyIcon
-              icon="heart"
-              iconFamily="font-awesome"
-              iconSize={theme.SIZES.BASE}
-              iconColor={theme.COLORS.ICON}
-              color="transparent"
-              onPress={() => Linking.openURL('https://galio.io')}
-            />
-          )}
-          left={(
-            <TouchableOpacity onPress={() => navigation.openDrawer()}>
-              <Icon 
-                name="menu"
-                family="feather"
-                size={theme.SIZES.BASE}
-                color={theme.COLORS.ICON}
-              />
-            </TouchableOpacity>
-          )}
-          style={Platform.OS === 'android' ? { marginTop: theme.SIZES.BASE } : null}
-        />
-
         <ScrollView style={{ flex: 1 }} showsVerticalScrollIndicator={false}>
           <Block style={styles.container}>
             {/* Buttons examples using Button component */}

@@ -153,7 +153,6 @@ class Dashboard extends React.Component {
     return (
       <Block safe flex>
         {/* header */}
-        {this.renderHeader()}
 
         {/* stats */}
         {this.renderStats()}
