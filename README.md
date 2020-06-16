@@ -2,6 +2,7 @@
 A react native starter kit app template with various useful screens ready to go (Home, Dashboard, Login...). 
 
 ![screenshot](https://i.imgur.com/83X7nGK.png)
+
 The goal is to get you writing your next react-native app in minutes and save you hours (and thousands of dollars) 
 reinventing the wheel for common modules such as a Login or Settings page. 
 
